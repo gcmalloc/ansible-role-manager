@@ -7,11 +7,11 @@ from pip.exceptions import InstallationError
 # TODO : these should be case-insensitive (or search/match should ignore case)
 
 ROUTE_REGEX =  {
-    'user':'(?P<user>[a-z][a-z\d\-]+?)',
-    'fqdn':'(?P<fqdn>([a-z][a-z\.\d\-]+)\.(?:[a-z][a-z\-]+)(?![\w\.]))',
-    'owner':'(?P<owner>[a-z][a-z\.\-]+)',
-    'repo':'(?P<repo>[a-z][\w\-_]+)',
-    'tag': '(\@(?P<tag>[a-z]+)){0,1}',
+    'user':'(?P<user>[a-zA-Z][a-zA-Z\d\-]+?)',
+    'fqdn':'(?P<fqdn>([a-zA-Z][a-zA-Z\.\d\-]+)\.(?:[a-zA-Z][a-zA-Z\-]+)(?![\w\.]))',
+    'owner':'(?P<owner>[a-zA-Z][a-zA-Z\.\-]+)',
+    'repo':'(?P<repo>[a-zA-Z][\w\-_]+)',
+    'tag': '(\@(?P<tag>[a-zA-Z]+)){0,1}',
     'path':'(\/(?P<path>[\w.-_]+))*'
 }   
 
